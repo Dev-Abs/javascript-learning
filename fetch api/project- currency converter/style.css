@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+    color: #333;
+}
+
+.currency-form{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.currency-form select{
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.currency-form input[type="number"]{
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.currency-form img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: blueviolet;
+    color: #fff;
+    cursor: pointer;
+}
+
+.currency-form button:hover{
+    background-color: #444;
+}
+
+.currency-result{
+    /* margin-top: 50px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    gap: 10px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 20px;
+}
+.currency-result p{
+    font-size: 24px;
+    color: #333;
+}
+
+.currency-result img{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.message{
+    margin-top: 50px;
+    text-align: center;
+    color: blueviolet;
+    font-size: 24px;
+}
+
+
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        font-family: sans-serif;
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+        height: 1000px;
+        background-color: aqua;
+    }
+
+    #game {
+        text-align: center;
+    }
+
+    #board {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .cell {
+        width: 100px;
+        height: 100px;
+        background: #f3f3f3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+
+
+    .cell[data-cell] {
+        border: 1px solid #0d003d;
+    }
+
+    .cell:hover {
+        background: #470909;
+    }
+
+    .x {
+        color: #1d1d1d;
+        background-color: #1d1d1d;
+    }
+
+    .o {
+        color: #f3f3f3;
+        background-color: aqua;
+    }
+
+    .status {
+        margin-top: 10px;
+        font-size: 2.5em;
+        color: #12cb0f;
+        height: 100px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .status.winner {
+        color: green;
+    }
+
+    .status.draw {
+        color: red;
+    }
+
+    #restart {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 1em;
+        background: #0d003d;
+        color: #f3f3f3;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+</style>
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div id="game">
+        <div id="board">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+    </div>
+    <div class="status" id="status"></div>
+    <button id="restart">Restart Game</button>
+    <script src="index.js"></script>
+</body>
+</html>
