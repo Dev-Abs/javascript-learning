@@ -30,7 +30,7 @@
       <img src="/images/logo.svg" alt="" />
     </div>
 
-    <div class="bg-White p-3 rounded-xl md:flex md:w-[1100px]">
+    <div class="bg-White p-3 rounded-xl md:flex md:w-[70%]">
 
       <div class="flex flex-col gap-10 my-5 md:w-[50%]">
 
@@ -39,7 +39,7 @@
           <div class="flex justify-between items-center gap-5">
             <img src="/images/icon-dollar.svg" alt="" />
             <input
-              class="font-black text-2xl self-end text-Very-dark-cyan text-right"
+              class="bill font-black text-2xl self-end text-Very-dark-cyan text-right input-border"
               value="1"
               type="text"
             />
@@ -52,32 +52,32 @@
           </div>
           <div class="grid grid-cols-2 gap-3">
             <button
-              class="bg-Very-dark-cyan text-white py-3 rounded-lg text-3xl"
+              class="btn bg-Very-dark-cyan text-white py-3 rounded-lg text-3xl"
             >
               5%
             </button>
             <button
-              class="bg-Very-dark-cyan text-white font-bold py-3 text-3xl rounded-lg"
+              class="btn bg-Very-dark-cyan text-white font-bold py-3 text-3xl rounded-lg"
             >
               10%
             </button>
             <button
-              class="bg-Very-dark-cyan text-white font-bold py-3 text-3xl rounded-lg"
+              class="btn bg-Very-dark-cyan text-white font-bold py-3 text-3xl rounded-lg"
             >
               15%
             </button>
             <button
-              class="bg-Very-dark-cyan text-white font-bold py-3 text-3xl rounded-lg"
+              class="btn bg-Very-dark-cyan text-white font-bold py-3 text-3xl rounded-lg"
             >
               25%
             </button>
             <button
-              class="bg-Very-dark-cyan text-white font-bold py-3 text-3xl rounded-lg"
+              class="btn bg-Very-dark-cyan text-white font-bold py-3 text-3xl rounded-lg"
             >
               50%
             </button>
             <input
-              class="bg-White font-bold py-3 rounded-lg text-center text-3xl"
+              class="custom input-btn btn bg-White font-bold py-3 rounded-lg text-center text-3xl"
               type="text"
               placeholder="Custom"
             />
@@ -91,7 +91,7 @@
           <div class="flex justify-between items-center gap-5">
             <img src="/images/icon-person.svg" alt="" />
             <input
-              class="font-black text-2xl self-end text-Very-dark-cyan text-right"
+              class="people font-black text-2xl self-end text-Very-dark-cyan text-right"
               value="1"
               type="text"
             />
@@ -109,7 +109,7 @@
               / person</span
             >
           </div>
-          <div class="font-black text-3xl text-strong-cyan">$0.00</div>
+          <div class="tip-amount font-black text-3xl text-strong-cyan">$0.00</div>
         </div>
         <div class="flex justify-between items-center gap-5">
           <div class="font-semibold text-lg text-White flex flex-col">
@@ -118,14 +118,20 @@
               / person</span
             >
           </div>
-          <div class="font-black text-3xl text-strong-cyan">$0.00</div>
+          <div class="total-amount font-black text-3xl text-strong-cyan">$0.00</div>
         </div>
         <button
-          class="bg-strong-cyan text-Very-dark-cyan font-bold py-3 text-3xl rounded-lg  md:mt-32"
+        class="get bg-strong-cyan text-Very-dark-cyan font-bold py-3 text-3xl rounded-lg  md:"
+      >
+      Get Results
+      </button>
+        <button
+          class="reset bg-strong-cyan text-Very-dark-cyan font-bold py-3 text-3xl rounded-lg  md:"
         >
           Reset
         </button>
       </div>
     </div>
   </body>
+  <script src="app.js"></script>
 </html>
