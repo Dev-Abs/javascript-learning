@@ -2,14 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-.btn.active{
-    transform: translateY(2px);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    @apply bg-strong-cyan;
+.btn.active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  @apply bg-strong-cyan;
 }
 
-.btn.custom{
-    @apply bg-white text-Very-dark-cyan;
+.btn.custom {
+  @apply bg-white text-Very-dark-cyan;
 }
