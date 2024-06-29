@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.google.com/specimen/Space+Mono"
+    />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+      body {
+        font-family: "Space Mono", monospace;
+      }
+    </style>
+    <title>Tip calculator app</title>
+  </head>
+  <body class="bg-Light-grayish-cyan flex flex-col md:justify-center md:items-center">
+    <div
+      class="w-[100%] bg-Light-grayish-cyan flex items-center justify-center h-40"
+    >
+      <img src="/images/logo.svg" alt="" />
+    </div>
+
+    <div class="bg-White p-3 rounded-xl md:flex md:w-[1100px]">
+
+      <div class="flex flex-col gap-10 my-5 md:w-[50%]">
+
+        <div class="mx-10 flex flex-col gap-2">
+          <div class="font-semibold text-lg text-Dark-grayish-cyan">Bill</div>
+          <div class="flex justify-between items-center gap-5">
+            <img src="/images/icon-dollar.svg" alt="" />
+            <input
+              class="font-black text-2xl self-end text-Very-dark-cyan text-right"
+              value="1"
+              type="text"
+            />
+          </div>
+        </div>
+
+        <div class="mx-10 flex flex-col gap-2">
+          <div class="font-semibold text-lg text-Dark-grayish-cyan">
+            Select Tip %
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <button
+              class="bg-Very-dark-cyan text-white py-3 rounded-lg text-3xl"
+            >
+              5%
+            </button>
+            <button
+              class="bg-Very-dark-cyan text-white font-bold py-3 text-3xl rounded-lg"
+            >
+              10%
+            </button>
+            <button
+              class="bg-Very-dark-cyan text-white font-bold py-3 text-3xl rounded-lg"
+            >
+              15%
+            </button>
+            <button
+              class="bg-Very-dark-cyan text-white font-bold py-3 text-3xl rounded-lg"
+            >
+              25%
+            </button>
+            <button
+              class="bg-Very-dark-cyan text-white font-bold py-3 text-3xl rounded-lg"
+            >
+              50%
+            </button>
+            <input
+              class="bg-White font-bold py-3 rounded-lg text-center text-3xl"
+              type="text"
+              placeholder="Custom"
+            />
+          </div>
+        </div>
+
+        <div class="mx-10 flex flex-col gap-2">
+          <div class="font-semibold text-lg text-Dark-grayish-cyan">
+            Number of People
+          </div>
+          <div class="flex justify-between items-center gap-5">
+            <img src="/images/icon-person.svg" alt="" />
+            <input
+              class="font-black text-2xl self-end text-Very-dark-cyan text-right"
+              value="1"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mx-10 flex flex-col gap-5 bg-Very-dark-cyan p-10 rounded-3xl my-5 md:w-[50%] md:gap-12"
+      >
+        <div class="flex justify-between items-center gap-5">
+          <div class="font-semibold text-lg text-White flex flex-col">
+            <span>Tip Amount</span>
+            <span class="font-semibold text-lg text-Dark-grayish-cyan">
+              / person</span
+            >
+          </div>
+          <div class="font-black text-3xl text-strong-cyan">$0.00</div>
+        </div>
+        <div class="flex justify-between items-center gap-5">
+          <div class="font-semibold text-lg text-White flex flex-col">
+            <span>Total</span
+            ><span class="font-semibold text-lg text-Dark-grayish-cyan">
+              / person</span
+            >
+          </div>
+          <div class="font-black text-3xl text-strong-cyan">$0.00</div>
+        </div>
+        <button
+          class="bg-strong-cyan text-Very-dark-cyan font-bold py-3 text-3xl rounded-lg  md:mt-32"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
