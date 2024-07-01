@@ -8,7 +8,6 @@ body{
     font-family: 'Poppins', sans-serif;
     background: url(images/bg-stars.svg) no-repeat center center/cover;
     background-color: hsl(234, 17%, 12%);
-    font-size: 14px;
 }
 
 .hill{
@@ -36,7 +35,7 @@ body{
     border-radius: 10px;
     padding: 2rem;
     width: 90%;
-    max-width: 400px;
+    max-width: 800px;
 }
 
 .container h1{
@@ -69,7 +68,7 @@ body{
     color: hsl(345, 95%, 68%);
     width: 100px;
     padding: 1rem;
-    font-size: 3ch;
+    font-size: 3rem;
     border-radius: 10px;
     text-align: center;
     background-color: hsl(237, 17%, 21%);
@@ -77,7 +76,8 @@ body{
 
 
 .countdown div p{
-    color: white;
+    /* color: hsl(236, 21%, 26%); */
+    color: hsl(237, 18%, 59%);
     font-size: 1rem;
     letter-spacing: 0.1rem;
 }
@@ -91,4 +91,30 @@ body{
     margin-top: 1rem;
     position: absolute;
     bottom: 3rem;
+}
+
+.icons img:hover{
+    cursor: pointer;
+    background-color: hsl(345, 95%, 68%);   
+}
+
+
+/* Media Query */
+@media screen and (min-width: 1040px){
+    .container h1{
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    .countdown div{
+        margin: 0 1rem;
+    }
+    .countdown div h2{
+        font-size: 4rem;
+        padding: 2rem;
+        width: 200px;
+    }
+    .countdown div p{
+        font-size: 1.5rem;
+        letter-spacing: 0.2rem;
+    }
 }

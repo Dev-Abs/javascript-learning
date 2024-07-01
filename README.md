@@ -8,7 +8,8 @@ This repository is dedicated to my journey in learning JavaScript. Here, I work 
 2. **Tic Tac Toe**
 3. **Hamburger**
 4. **Tip Calculator App**
-4. **Toast Notifications**
+5. **Toast Notifications**
+6. **Launch Countdown Timer**
 
 More projects will be added as I continue my learning journey.
 
