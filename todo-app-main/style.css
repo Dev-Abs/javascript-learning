@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(230, 17%, 14%);
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 50px;
+    background: url(images/bg-mobile-dark.jpg) no-repeat center center/cover;
+    height: 250px;
+}
+
+
+.one{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+
+
+.header h1{
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 0.7rem;
+}
+
+
+.input{
+    width: 80vw;
+    padding: 15px;
+    background-color: hsl(237, 14%, 26%);
+    display: flex;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.input input{
+    border: none;
+    background-color: hsl(237, 14%, 26%);
+    outline: none;
+}
+
+.note-div
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    margin: 20px auto;
+    position: absolute;
+    top: 185px;
+    left: 10%;
+}
+
+.note-div .notes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(237, 14%, 26%);
+    border-radius: 5px;
+    gap: 20px;
+}
+
+.note-div .notes .note{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid hsl(234, 11%, 52%);
+}
+
+.clear {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: hsl(237, 14%, 26%);
+    border-radius: 5px;
+}
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: hsl(237, 14%, 26%);
+    border-radius: 5px;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+
+.end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    color: hsl(237, 14%, 26%);
+}
+
+/* Media Query */
+
+@media screen and (min-width: 768px){
+    .header{
+        height: 300px;
+        background: url(images/bg-desktop-dark.jpg) no-repeat center center/cover;
+    }
+
+    .header h1{
+        font-size: 2rem;
+    }
+
+    .input{
+        width: 50vw;
+    }
+
+    .note-div{
+        width: 50vw;
+        top: 240px;
+        left: 25%;
+    }
+    .one{
+        width: 55%;
+    }
+}
