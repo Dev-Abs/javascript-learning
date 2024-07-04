@@ -149,6 +149,16 @@ body{
         background: url(images/bg-desktop-dark.jpg) no-repeat center center/cover;
     }
 
+    .header.mobilelight{
+        height: 250px;
+        background: url(images/bg-mobile-light.jpg) no-repeat center center/cover;
+    }
+
+    .header.mobiledark{
+        height: 250px;
+        background: url(images/bg-mobile-dark.jpg) no-repeat center center/cover;
+    }
+
     .header h1{
         font-size: 2rem;
     }

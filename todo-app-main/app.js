@@ -1,22 +1,21 @@
-// let note = document.createElement('div');
-// note.innerHTML = `<i class="fa-regular fa-circle"></i>
-//           <p>i am new note</p>
-//           <img src="images/icon-cross.svg" alt="" />`;
-
-// note.classList.add('note');
-// notes.appendChild(note);
-
 let notes = document.getElementsByClassName("notes")[0];
 let enter = document.getElementById("enter");
 let input = document.getElementById("entertext");
 let toggle = document.getElementById("toggle");
-
 let image = document.getElementsByClassName("image")[0];
+let header = document.getElementsByClassName("header")[0];
+
+// when toggle is clicked, the background color should change
+
+
 
 
 toggle.addEventListener("click", function () {
   if (toggle.classList.contains("moon")) {
-    console.log("clicked")
+    console.log("clicked");
+    header.style.background = "url(images/bg-desktop-light.jpg) no-repeat center center/cover"
+    // header.classList.add("mobilelight")
+    // header.classList.remove("mobiledark")
     image.src = "images/icon-sun.svg";
     toggle.classList.remove("moon");
     toggle.classList.add("sun");
@@ -26,6 +25,10 @@ toggle.addEventListener("click", function () {
     notes.style.color = "white";
   } else {
     image.src = "images/icon-moon.svg";
+
+    header.style.background = "url(images/bg-desktop-dark.jpg) no-repeat center center/cover"
+    // header.classList.remove("mobilelight")
+    // header.classList.add("mobiledark")
     toggle.classList.remove("sun");
     toggle.classList.add("moon");
     document.body.style.backgroundColor = "hsl(0, 0%, 98%)";
