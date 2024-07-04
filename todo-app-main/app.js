@@ -9,6 +9,31 @@
 let notes = document.getElementsByClassName("notes")[0];
 let enter = document.getElementById("enter");
 let input = document.getElementById("entertext");
+let toggle = document.getElementById("toggle");
+
+let image = document.getElementsByClassName("image")[0];
+
+
+toggle.addEventListener("click", function () {
+  if (toggle.classList.contains("moon")) {
+    console.log("clicked")
+    image.src = "images/icon-sun.svg";
+    toggle.classList.remove("moon");
+    toggle.classList.add("sun");
+    document.body.style.backgroundColor = "hsl(235, 21%, 11%)";
+    document.body.style.color = "white";
+    notes.style.backgroundColor = "hsl(235, 24%, 19%)";
+    notes.style.color = "white";
+  } else {
+    image.src = "images/icon-moon.svg";
+    toggle.classList.remove("sun");
+    toggle.classList.add("moon");
+    document.body.style.backgroundColor = "hsl(0, 0%, 98%)";
+    document.body.style.color = "black";
+    notes.style.backgroundColor = "white";
+    notes.style.color = "black";
+  }
+});
 
 let left = document.getElementById("left");
 let itemsCount = 0;
@@ -22,7 +47,6 @@ enter.addEventListener("click", function () {
   note.classList.add("note");
   notes.appendChild(note);
   input.value = "";
-  console.log("clicked");
 });
 
 let check = document.getElementsByClassName("check");

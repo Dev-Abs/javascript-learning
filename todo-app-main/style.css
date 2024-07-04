@@ -9,6 +9,10 @@ body{
     background-color: hsl(230, 17%, 14%);
 }
 
+#enter:hover{
+    cursor: pointer;
+}
+
 .header{
     display: flex;
     flex-direction: column;
@@ -49,6 +53,7 @@ body{
     border: none;
     background-color: hsl(237, 14%, 26%);
     outline: none;
+    font-size: medium;
 }
 
 .note-div
@@ -86,6 +91,14 @@ body{
     border-bottom: 1px solid hsl(234, 11%, 52%);
 }
 
+.note i:hover{
+    cursor: pointer;
+}
+
+.note img:hover{
+    cursor: pointer;
+}
+
 .clear {
     display: flex;
     justify-content: space-between;
@@ -94,6 +107,11 @@ body{
     padding: 20px;
     background-color: hsl(237, 14%, 26%);
     border-radius: 5px;
+}
+
+#right:hover{
+    cursor: pointer;
+    color: #fff;
 }
 
 
@@ -119,6 +137,10 @@ body{
     color: hsl(237, 14%, 26%);
 }
 
+
+#toggle{
+    cursor: pointer;
+}
 /* Media Query */
 
 @media screen and (min-width: 768px){
