@@ -10,6 +10,7 @@ This repository is dedicated to my journey in learning JavaScript. Here, I work 
 4. **Tip Calculator App**
 5. **Toast Notifications**
 6. **Launch Countdown Timer**
+7. **ToDo App**
 
 More projects will be added as I continue my learning journey.
 
