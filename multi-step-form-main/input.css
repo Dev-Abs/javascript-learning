@@ -65,3 +65,15 @@
   .slider.round:before {
     border-radius: 50%;
   }
+
+  .arcade.active{
+    border: 2px solid hsl(243, 100%, 62%);
+  }
+
+  .advanced.active{
+    border: 2px solid hsl(243, 100%, 62%);
+  }
+
+  .pro.active{
+    border: 2px solid hsl(243, 100%, 62%);
+  }

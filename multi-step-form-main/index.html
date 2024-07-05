@@ -23,7 +23,7 @@
         >
           <div class="lg:flex lg:gap-5 lg:justify-center lg:items-center">
             <h3
-              class="w-10 h-10 border-white mt-14 border-2 rounded-full flex justify-center items-center lg:mt-2"
+              class="one bg-[#bfe2fd] text-black w-10 h-10 mt-14 rounded-full flex justify-center items-center lg:mt-2"
             >
               1
             </h3>
@@ -35,7 +35,7 @@
 
           <div class="lg:flex lg:gap-5 lg:justify-center lg:items-center">
             <h3
-              class="w-10 h-10 border-white mt-14 border-2 rounded-full flex justify-center items-center lg:mt-2"
+              class="two w-10 h-10 border-white mt-14 border-2 rounded-full flex justify-center items-center lg:mt-2"
             >
               2
             </h3>
@@ -49,7 +49,7 @@
 
           <div class="lg:flex lg:gap-5 lg:justify-center lg:items-center">
             <h3
-              class="w-10 h-10 border-white mt-14 border-2 rounded-full flex justify-center items-center lg:mt-2"
+              class=" three w-10 h-10 border-white mt-14 border-2 rounded-full flex justify-center items-center lg:mt-2"
             >
               3
             </h3>
@@ -61,7 +61,7 @@
 
           <div class="lg:flex lg:gap-5 lg:justify-center lg:items-center">
             <h3
-              class="w-10 h-10 border-white mt-14 border-2 rounded-full flex justify-center items-center lg:mt-2"
+              class="four w-10 h-10 border-white mt-14 border-2 rounded-full flex justify-center items-center lg:mt-2"
             >
               4
             </h3>
@@ -72,14 +72,12 @@
           </div>
         </div>
 
-        <!-- <div class="flex justify-center items-center hidden"> -->
-
-        <div class="justify-center items-center hidden">
+        <div class="step1 flex justify-center items-center ">
           <div
             class="card w-[85%] h-[50vh] min-h-[500px] bg-[#fff] shadow-md rounded-3xl absolute top-[135px] lg:static"
           >
             <div
-              class="card-header flex flex-col items-start justify-center gap-3 p-6"
+              class="card-header flex flex-col items-start justify-center gap-3 p-6 lg:p-3"
             >
               <h2 class="text-[#02295a] font-extrabold text-3xl">
                 Personal info
@@ -89,7 +87,7 @@
               </p>
             </div>
             <div class="card-body p-6">
-              <form class="flex flex-col gap-4" action="#" method="POST">
+              <form class="flex flex-col gap-4" action="#" method="">
                 <div class="form-control flex flex-col gap-1">
                   <label class="text-[#02295a]" for="name">Name</label>
                   <input
@@ -124,9 +122,10 @@
                   />
                 </div>
                 <button
-                  class="self-end mt-32 text-white bg-[#02295a] p-3 rounded-md shadow-xl hidden lg:block"
+                  class="self-end absolute right-[70px] bottom-[-255px] lg:relative lg:right-[-200px] lg:bottom-2 mt-32 text-white bg-[#02295a] p-3 rounded-md shadow-xl lg:block"
                   type="submit"
                   class="btn"
+                  id="step1btn"
                 >
                   Next Step
                 </button>
@@ -135,7 +134,7 @@
           </div>
         </div>
 
-        <div class="flex justify-center items-center hidden lg:w-[75%]">
+        <div class="step2  justify-center items-center lg:w-[75%] hidden">
           <div
             class="card w-[85%] h-[60vh] min-h-[500px] bg-[#fff] shadow-md rounded-3xl absolute top-[135px] lg:static"
           >
@@ -154,32 +153,32 @@
               class="card-body p-6 flex flex-col gap-2 lg:flex-row lg:w-[100%] lg:h-[300px]"
             >
               <div
-                class="flex gap-7 p-6 border-slate-300 border-2 rounded-xl lg:w-[33%] lg:h-[200px] lg:flex-col lg:justify-between"
+                class="arcade flex gap-7 p-6 cursor-pointer border-slate-300 border-2 rounded-xl lg:w-[33%] lg:h-[200px] lg:flex-col lg:justify-between"
               >
                 <img class="lg:w-10" src="assets/images/icon-arcade.svg" alt="" />
                 <div>
                   <h2 class="text-xl font-bold">Arcade</h2>
-                  <p class="text-[#d6d9e6]">$9/moo</p>
+                  <p id="arcadetext" class="text-[#d6d9e6]">$9/mo</p>
                 </div>
               </div>
 
               <div
-                class="flex gap-7 p-6 border-slate-300 border-2 rounded-xl lg:w-[33%] lg:h-[200px] lg:flex-col lg:justify-between""
+                class="advanced cursor-pointer flex gap-7 p-6 border-slate-300 border-2 rounded-xl lg:w-[33%] lg:h-[200px] lg:flex-col lg:justify-between""
               >
                 <img class="lg:w-10" src="assets/images/icon-advanced.svg" alt="" />
                 <div>
                   <h2 class="text-xl font-bold">Advanced</h2>
-                  <p class="text-[#d6d9e6]">$12/moo</p>
+                  <p id="advancedtext" class="text-[#d6d9e6]">$12/mo</p>
                 </div>
               </div>
 
               <div
-                class="flex gap-7 p-6 border-slate-300 border-2 rounded-xl lg:w-[33%] lg:h-[200px] lg:flex-col lg:justify-between""
+                class="pro cursor-pointer flex gap-7 p-6 border-slate-300 border-2 rounded-xl lg:w-[33%] lg:h-[200px] lg:flex-col lg:justify-between""
               >
                 <img class="lg:w-10" src="assets/images/icon-pro.svg" alt="" />
                 <div>
                   <h2 class="text-xl font-bold">Pro</h2>
-                  <p class="text-[#d6d9e6]">$15/moo</p>
+                  <p id="protext" class="text-[#d6d9e6]">$15/mo</p>
                 </div>
               </div>
             </div>
@@ -187,19 +186,21 @@
             <div class="flex gap-7 items-center justify-center p-6">
               <p>Monthly</p>
               <!-- toggle switch -->
-              <label class="switch">
+              <label id="toggle" class="switch notchecked">
                 <input type="checkbox" />
                 <span class="slider round"></span>
               </label>
               <p>Yearly</p>
             </div>
 
-            <div class="footer items-center justify-center  gap-[35vw] hidden bg-[#fff] p-4 lg:flex">
-              <p class="relative left-0">Go Back</p>
+            <div class="footer items-center justify-center flex gap-[35vw] mt-[120px] bg-[#fff] p-4 lg:mt-0">
+
+              <p id="goback1" class="relative left-0 cursor-pointer">Go Back</p>
               <button
               class=" text-white bg-[#02295a] p-3 rounded-md shadow-xl"
               type="submit"
               class="btn"
+              id="step2btn"
             >
               Next Step
             </button>
@@ -207,7 +208,7 @@
           </div>
         </div>
 
-        <div class="flex justify-center items-center lg:w-[75%] hidden">
+        <div class="step3  justify-center items-center lg:w-[75%] hidden">
           <div
             class="card w-[85%] h-[60vh] min-h-[500px] bg-[#fff] shadow-md rounded-3xl absolute top-[135px] lg:static"
           >
@@ -229,7 +230,7 @@
                 class="flex gap-7 p-6 justify-between border-slate-300 border-2 rounded-xl "
               >
               <div class="flex gap-4">
-              <input class="w-6" type="checkbox" name="" id="">
+              <input id="online" class="w-6" type="checkbox" name="" id="">
               <div class="">
                   <h2 class="text-xl font-bold">Online Services</h2>
                   <p class="text-[#d6d9e6]">Access to multiplayer games</p>
@@ -242,7 +243,7 @@
                 class="flex gap-7 p-6 justify-between border-slate-300 border-2 rounded-xl"
               >
               <div class="flex gap-4">
-              <input class="w-6" type="checkbox" name="" id="">
+              <input id="larger" class="w-6" type="checkbox" name="" id="">
               <div class="">
                   <h2 class="text-xl font-bold">Larger Storage</h2>
                   <p class="text-[#d6d9e6]">Extra 1TB of cloud save</p>
@@ -255,7 +256,7 @@
                 class="flex gap-7 p-6 justify-between border-slate-300 border-2 rounded-xl"
               >
               <div class="flex gap-4">
-              <input class="w-6" type="checkbox" name="" id="">
+              <input id="profile" class="w-6" type="checkbox" name="" id="">
               <div class="">
                   <h2 class="text-xl font-bold">Customizable Profile</h2>
                   <p class="text-[#d6d9e6]">Custom theme on your profile</p>
@@ -264,12 +265,13 @@
                   <p class="text-[#02295a] font-bold">+$2/mo</p>
               </div>
 
-            <div class="footer items-center justify-center  gap-[35vw] hidden bg-[#fff] p-4 lg:flex">
-              <p class="relative left-0">Go Back</p>
+            <div class="footer items-center justify-center flex gap-[35vw] mt-[120px] bg-[#fff] p-4 lg:mt-0 lg:flex">
+              <p id="goback2" class="relative left-0 cursor-pointer">Go Back</p>
               <button
               class=" text-white bg-[#02295a] p-3 rounded-md shadow-xl"
               type="submit"
               class="btn"
+              id="step3btn"
             >
               Next Step
             </button>
@@ -282,7 +284,7 @@
 
       </div>
 
-      <div class="flex justify-center items-center lg:w-[75%] hidden">
+      <div class="step4  justify-center items-center lg:w-[75%] hidden">
         <div
           class="card w-[85%] h-[60vh] min-h-[500px] bg-[#fff] shadow-md rounded-3xl absolute top-[135px] lg:static"
         >
@@ -338,20 +340,16 @@
           </div>
           <p class="text-[#02295a] font-extrabold text-2xl">$12/mo</p>
       </div>
-
-
-
-            </div>
+    </div>
             
 
-
-
-          <div class="items-center justify-center mt-14 gap-[35vw] hidden bg-[#fff] p-4 lg:flex">
-            <p class="relative left-0">Go Back</p>
+          <div class="footer items-center justify-center flex gap-[35vw] mt-[120px] bg-[#fff] p-4 lg:mt-0 lg:flex">
+            <p id="goback3" class="relative left-0 cursor-pointer">Go Back</p>
             <button
             class=" text-white bg-[#02295a] p-3 rounded-md shadow-xl"
             type="submit"
             class="btn"
+            id="step4btn"
           >
            Confirm
           </button>
@@ -359,7 +357,7 @@
         </div>
       </div>
 
-      <div class="flex justify-center items-center lg:w-[75%]">
+      <div class="step5 justify-center items-center lg:w-[75%] hidden">
           <div
             class="card-body w-[85%] h-[60vh] p-6 flex flex-col gap-2 lg:w-[100%] lg:h-[300px]  bg-[#fff] rounded-3xl absolute top-[135px] lg:static"
           >
@@ -376,27 +374,11 @@
 
           </div>
         </div>
-            
+
+
         </div>
       </div>
-    </div>
 
-    </div>
-
-
-
-
-
-    <div class="footer absolute bottom-[2%] right-[2%] items-center flex gap-[60vw] bg-[#fff] p-4 lg:hidden">
-      <p class="relative left-0">Go Back</p>
-      <button
-      class=" text-white bg-[#02295a] p-3 rounded-md shadow-xl lg:hidden"
-      type="submit"
-      class="btn"
-    >
-      Next Step
-    </button>
-    </div>
 
     <script src="app.js"></script>
   </body>
