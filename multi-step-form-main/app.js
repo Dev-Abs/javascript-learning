@@ -19,6 +19,21 @@ let goback1 = document.getElementById('goback1');
 let goback2 = document.getElementById('goback2');
 let goback3 = document.getElementById('goback3');
 
+let monthyear = document.getElementById('monthyear');
+let finalAmount = document.getElementById('finalAmount');
+
+let account = document.getElementById('account');
+let finalaccountamount = document.getElementById('finalaccountamount');
+
+let serviceamount = document.getElementById('serviceamount');
+let largeramount = document.getElementById('largeramount');
+let customamount = document.getElementById('customamount');
+
+let finalservice = document.querySelector('#finalonline');
+let finallarger = document.querySelector('#finallarger');
+let finalprofile = document.querySelector('#finalprofile');
+
+
 
 goback1.addEventListener('click', function() {
     step2.classList.add('hidden');
@@ -105,6 +120,8 @@ step2btn.addEventListener('click', function() {
     two.classList.remove('bg-[#bfe2fd]');
     three.classList.remove('border-white');
     three.classList.remove('border-2');
+    console.log('in step 2 finish', monthBool, yearBool);
+
 });
 
 step3btn.addEventListener('click', function() {
@@ -124,8 +141,40 @@ step3btn.addEventListener('click', function() {
     four.classList.remove('border-2');
 
     console.log(totalText)
-    let total = onlinecost + largercost + profilecost ;
-    console.log(total);
+    console.log(accountCost);
+
+    account.innerText = totalText;
+
+    finalAmount.innerText = accountCost + onlinecost + largercost + profilecost;
+
+    if(monthBool){
+    finalAmount.innerText = '$' + finalAmount.innerText + '/mo';
+    finalaccountamount.innerText = '$' + accountCost + '/mo';
+    }
+    if(yearBool){
+        finalAmount.innerText = '$' + finalAmount.innerText + '/yr';
+        finalaccountamount.innerText = '$' + accountCost + '/yr';
+    }
+
+    if(online.checked){
+        onlineservice.classList.remove('hidden');
+    }
+    if(larger.checked){
+        largerstorage.classList.remove('hidden');
+    }
+    if(profile.checked){
+        customprofile.classList.remove('hidden');
+    }
+
+    if(!online.checked){
+        onlineservice.classList.add('hidden');
+    }
+    if(!larger.checked){
+        largerstorage.classList.add('hidden');
+    }
+    if(!profile.checked){
+        customprofile.classList.add('hidden');
+    }
 });
 
 step4btn.addEventListener('click', function() {
@@ -154,43 +203,58 @@ let pro = document.querySelector('.pro');
 let monthBool = true;
 let yearBool = false;
 
+    // if(monthBool){
+    //     console.log('in month');
+    //     console.log(serviceamount);
+
+    // } 
+
+    if(yearBool){
+        console.log('in year');
+        console.log(serviceamount);
+
+    }
+
+
+
 toggle.addEventListener('change', function () {
     if (label.classList.contains('notchecked')) {
         arcadetext.innerText = '$90/yr';
         advancetext.innerText = '$120/yr';
         protext.innerText = '$150/yr';
 
-        arcadeCost = 90;
-        advanceCost = 120;
-        proCost = 150;
+        serviceamount.innerText = '$' + 12 + '/yr';
+        largeramount.innerText = '$' + 24 + '/yr';
+        customamount.innerText = '$' + 24 + '/yr';
+
+        advance.classList.remove('active');
+        arcade.classList.remove('active');
+        pro.classList.remove('active');
+        
 
         yearBool =true;
         monthBool = false;
-
-        label.classList.remove('notchecked');
-        label.classList.add('checked');
     } 
     else if (label.classList.contains('checked')) {
         arcadetext.innerText = '$9/mo';
         advancetext.innerText = '$12/mo';
         protext.innerText = '$15/mo';
 
-        arcadeCost = 9;
-        advanceCost = 12;
-        proCost = 15;
+        serviceamount.innerText = '$' + 1 + '/mo';
+        largeramount.innerText = '$' + 2 + '/mo';
+        customamount.innerText = '$' + 2 + '/mo';
+
+        advance.classList.remove('active');
+        arcade.classList.remove('active');
+        pro.classList.remove('active');
 
         monthBool = true;
         yearBool = false;
 
-
-        label.classList.remove('checked');
-        label.classList.add('notchecked');
 }
 });
 
-let arcadeCost = 0;
-let advanceCost = 0;
-let proCost = 0;
+let accountCost = 0;
 let totalText = '';
 
 
@@ -202,10 +266,12 @@ arcade.addEventListener('click', function() {
 
     if (monthBool){
         totalText = 'Arcade (Monthly)'
+        accountCost = 9;
     }
 
     if (yearBool){
         totalText = 'Arcade (Yearly)'
+        accountCost = 90;
     }
 });
 
@@ -215,11 +281,13 @@ advance.addEventListener('click', function() {
     pro.classList.remove('active');
     
     if (monthBool){
-        totalText = 'Advanced (Monthly)'
+        totalText = 'Advanced (Monthly)';
+        accountCost = 12;
     }
 
     if (yearBool){
-        totalText = 'Advanced (Yearly)'
+        totalText = 'Advanced (Yearly)';
+        accountCost =120;
     }
 });
 
@@ -230,10 +298,13 @@ pro.addEventListener('click', function() {
     
     if (monthBool){
         totalText = 'Pro (Monthly)'
+        accountCost =15;
+    
     }
 
     if (yearBool){
         totalText = 'Pro (Yearly)'
+        accountCost= 150;
     }
 });
 
@@ -242,30 +313,47 @@ let online = document.querySelector('#online');
 let larger = document.querySelector('#larger');
 let profile = document.querySelector('#profile');
 
+let onlineservice = document.querySelector('#onlineservice');
+let largerstorage = document.querySelector('#largerstorage');
+let customprofile = document.querySelector('#customprofile');
+
 let onlinecost = 0;
 let largercost = 0;
 let profilecost = 0;
 
 online.addEventListener('change', function() {
-    if (online.checked) {
+    if (online.checked && monthBool) {
         onlinecost = 1;
+        finalservice.innerText = '$' + onlinecost + '/mo';
+    } else if (online.checked && yearBool){
+        console.log('in year service');
+        onlinecost = 12;
+        finalservice.innerText = '$' + onlinecost + '/yr';
+        console.log('in year service', finalservice.innerText);
     } else {
         onlinecost = 0;
     }
 });
 
 larger.addEventListener('change', function() {
-    if (larger.checked) {
+    if (larger.checked && monthBool) {
         largercost = 2;
+        finallarger.innerText = '$' + largercost + '/mo';
+    } else if (larger.checked && yearBool){
+        largercost = 24;
+        finallarger.innerText = '$' + largercost + '/yr';
     } else {
         largercost = 0;
     }
 });
 
 profile.addEventListener('change', function() {
-    if (profile.checked) {
+    if (profile.checked && monthBool) {
         profilecost = 2;
-        console.log(profilecost);
+        finalprofile.innerText = '$' + profilecost + '/mo';
+    } else if (profile.checked && yearBool){
+        profilecost = 24;
+        finalprofile.innerText = '$' + profilecost + '/yr';
     } else {
         profilecost = 0;
     }

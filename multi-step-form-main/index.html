@@ -13,13 +13,13 @@
     <title>Multi-step form</title>
   </head>
   <body>
-    <div class="lg:flex lg:flex-col lg:justify-center lg:items-center">
+    <div class="lg:flex lg:flex-col lg:justify-center lg:items-center lg:h-[]">
       <div
-        class="main lg:flex lg:flex-row lg:justify-start lg:items-center lg:w-[85%] lg:h-[100%] lg:my-[10%] lg:shadow-black lg:shadow-sm rounded-3xl"
+        class="main lg:flex lg:flex-row lg:justify-start lg:items-center lg:w-[85%] lg:h-[80vh] lg:my-[10%] lg:shadow-black lg:shadow-sm rounded-3xl"
       >
 
         <div
-          class="header h-60 flex gap-6 items-start justify-center bg-cover bg-center text-white bg-[url('/assets/images/bg-sidebar-mobile.svg')] lg:flex-col lg:bg-[url('/assets/images/bg-sidebar-desktop.svg')] lg:w-[25%] lg:h-[620px] lg:p-10 lg:rounded-l-3xl"
+          class="header h-60 flex gap-6 items-start justify-center bg-cover bg-center text-white bg-[url('/assets/images/bg-sidebar-mobile.svg')] lg:flex-col lg:bg-[url('/assets/images/bg-sidebar-desktop.svg')] lg:w-[25%] lg:h-[100%] lg:p-10 lg:rounded-l-3xl"
         >
           <div class="lg:flex lg:gap-5 lg:justify-center lg:items-center">
             <h3
@@ -74,10 +74,10 @@
 
         <div class="step1 flex justify-center items-center ">
           <div
-            class="card w-[85%] h-[50vh] min-h-[500px] bg-[#fff] shadow-md rounded-3xl absolute top-[135px] lg:static"
+            class="card w-[85%] h-[50vh] min-h-[500px] bg-[#fff] shadow-md rounded-3xl absolute top-[135px] lg:shadow-none lg:static"
           >
             <div
-              class="card-header flex flex-col items-start justify-center gap-3 p-6 lg:p-3"
+              class="card-header lg:w-[600px] flex flex-col items-start justify-center gap-3 p-6 lg:p-3"
             >
               <h2 class="text-[#02295a] font-extrabold text-3xl">
                 Personal info
@@ -87,7 +87,7 @@
               </p>
             </div>
             <div class="card-body p-6">
-              <form class="flex flex-col gap-4" action="#" method="">
+              <form class="flex flex-col gap-4 " action="#" method="">
                 <div class="form-control flex flex-col gap-1">
                   <label class="text-[#02295a]" for="name">Name</label>
                   <input
@@ -122,7 +122,7 @@
                   />
                 </div>
                 <button
-                  class="self-end absolute right-[70px] bottom-[-255px] lg:relative lg:right-[-200px] lg:bottom-2 mt-32 text-white bg-[#02295a] p-3 rounded-md shadow-xl lg:block"
+                  class="self-end absolute right-[70px] bottom-[-255px] lg:relative lg:right-[-360px] lg:bottom-2 mt-32 text-white bg-[#02295a] p-3 rounded-md shadow-xl lg:block"
                   type="submit"
                   class="btn"
                   id="step1btn"
@@ -136,10 +136,10 @@
 
         <div class="step2  justify-center items-center lg:w-[75%] hidden">
           <div
-            class="card w-[85%] h-[60vh] min-h-[500px] bg-[#fff] shadow-md rounded-3xl absolute top-[135px] lg:static"
+            class="card w-[85%] h-[65vh] min-h-[500px] bg-[#fff] shadow-md rounded-3xl absolute top-[135px] lg:static"
           >
             <div
-              class="card-header flex flex-col items-start justify-center gap-3 p-6 lg:w-[100%  ]"
+              class="card-header flex flex-col items-start justify-center gap-3 p-6 lg:w-[100%]"
             >
               <h2 class="text-[#02295a] font-extrabold text-3xl">
                 Select your plan
@@ -236,7 +236,7 @@
                   <p class="text-[#d6d9e6]">Access to multiplayer games</p>
                 </div>
               </div>
-                  <p class="text-[#02295a] font-bold">+$1/mo</p>
+                  <p id="serviceamount"  class="text-[#02295a] font-bold">+$1/mo</p>
               </div>
 
               <div
@@ -249,7 +249,7 @@
                   <p class="text-[#d6d9e6]">Extra 1TB of cloud save</p>
                 </div>
               </div>
-                  <p class="text-[#02295a] font-bold">+$2/mo</p>
+                  <p id="largeramount"  class="text-[#02295a] font-bold">+$2/mo</p>
               </div>
 
               <div
@@ -262,7 +262,7 @@
                   <p class="text-[#d6d9e6]">Custom theme on your profile</p>
                 </div>
               </div>
-                  <p class="text-[#02295a] font-bold">+$2/mo</p>
+                  <p id="customamount"  class="text-[#02295a] font-bold">+$2/mo</p>
               </div>
 
             <div class="footer items-center justify-center flex gap-[35vw] mt-[120px] bg-[#fff] p-4 lg:mt-0 lg:flex">
@@ -286,7 +286,7 @@
 
       <div class="step4  justify-center items-center lg:w-[75%] hidden">
         <div
-          class="card w-[85%] h-[60vh] min-h-[500px] bg-[#fff] shadow-md rounded-3xl absolute top-[135px] lg:static"
+          class="card w-[85%] h-[80vh] min-h-[500px] lg:h-[700px] bg-[#fff] shadow-md rounded-3xl absolute top-[135px] lg:static"
         >
           <div
             class="card-header flex flex-col items-start justify-center gap-3 p-6 lg:w-[100%  ]"
@@ -307,43 +307,53 @@
               class="flex gap-7 p-6 justify-between border-slate-300 border-2 rounded-xl "
             >
                 <div>
-                  <h2 class="text-xl font-bold">Arcade (Monthly)</h2>
+                  <h2 id="account"  class="text-xl font-bold">Arcade (Monthly)</h2>
                   <a class="underline" href="">Change</a>
                 </div>
-                <p class="text-[#02295a]">$9/mo</p>
+                <p id="finalaccountamount" class="text-[#02295a]">$9/mo</p>
             </div>
 
-            <div
-            class="flex gap-7 p-4 justify-between rounded-xl "
+            <div id="onlineservice"
+            class="flex gap-7 p-4 justify-between rounded-xl hidden"
           >
               <div>
                 <h2 class="text-xl font-medium">Online Service</h2>
               </div>
-              <p class="text-[#02295a]">$1/mo</p>
+              <p id="finalonline" class="text-[#02295a]">$1/mo</p>
           </div>
 
-          <div
-          class="flex gap-7 p-4 justify-between rounded-xl "
+          <div id="largerstorage"
+          class="flex gap-7 p-4 justify-between rounded-xl hidden"
         >
             <div>
               <h2 class="text-xl font-medium">Larger Storage</h2>
             </div>
-            <p class="text-[#02295a]">$2/mo</p>
+            <p id="finallarger" class="text-[#02295a]">$2/mo</p>
         </div>
+
+        
+        <div id="customprofile"
+        class="flex gap-7 p-4 justify-between rounded-xl hidden"
+      >
+          <div>
+            <h2 class="text-xl font-medium">Customizable Profile</h2>
+          </div>
+          <p id="finalprofile" class="text-[#02295a]">$2/mo</p>
+      </div>
 
         <div
         class="flex p-6 justify-between rounded-xl "
       >
           <div>
-            <h2 class="text-xl font-semibold">Total (per month)</h2>
+            <h2 id="monthyear" class="text-xl font-semibold">Total (per month)</h2>
             <a href="">Change</a>
           </div>
-          <p class="text-[#02295a] font-extrabold text-2xl">$12/mo</p>
+          <p id="finalAmount" class="text-[#02295a] font-extrabold text-2xl">$12/mo</p>
       </div>
     </div>
             
 
-          <div class="footer items-center justify-center flex gap-[35vw] mt-[120px] bg-[#fff] p-4 lg:mt-0 lg:flex">
+          <div class="footer items-center justify-center flex gap-[35vw] mt-[120px] bg-[#fff] p-4 lg:mt-[120px] lg:flex">
             <p id="goback3" class="relative left-0 cursor-pointer">Go Back</p>
             <button
             class=" text-white bg-[#02295a] p-3 rounded-md shadow-xl"
@@ -378,7 +388,7 @@
 
         </div>
       </div>
-
+    </div>
 
     <script src="app.js"></script>
   </body>
