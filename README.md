@@ -11,6 +11,7 @@ This repository is dedicated to my journey in learning JavaScript. Here, I work 
 5. **Toast Notifications**
 6. **Launch Countdown Timer**
 7. **ToDo App**
+8. **Multi Step Form**
 
 More projects will be added as I continue my learning journey.
 
