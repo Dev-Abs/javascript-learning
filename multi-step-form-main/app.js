@@ -218,7 +218,7 @@ let yearBool = false;
 
 
 toggle.addEventListener('change', function () {
-    if (label.classList.contains('notchecked')) {
+    if (toggle.checked) {
         arcadetext.innerText = '$90/yr';
         advancetext.innerText = '$120/yr';
         protext.innerText = '$150/yr';
@@ -235,7 +235,7 @@ toggle.addEventListener('change', function () {
         yearBool =true;
         monthBool = false;
     } 
-    else if (label.classList.contains('checked')) {
+    else if (!toggle.checked) {
         arcadetext.innerText = '$9/mo';
         advancetext.innerText = '$12/mo';
         protext.innerText = '$15/mo';
