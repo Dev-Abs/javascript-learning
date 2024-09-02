@@ -4,11 +4,7 @@ let minutesId = document.getElementById("minutes");
 let secondsId = document.getElementById("seconds");
 
 
-<<<<<<< HEAD
 let newDate = new Date("2024-09-12T00:00:00");
-=======
-let newDate = new Date("2024-08-27T00:00:00");
->>>>>>> 1a875c5945e46f0355a8670f1edf413ce7529ebe
 let currentDate = new Date();
 let diff = newDate - currentDate;
 let days = Math.floor(diff / (1000 * 60 * 60 * 24));
